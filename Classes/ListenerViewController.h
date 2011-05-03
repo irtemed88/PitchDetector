@@ -18,7 +18,7 @@
 	RIOInterface *rioRef;
 	
 	NSMutableString *key;
-	float currentFrequecy;
+	float currentFrequency;
 	NSString *prevChar;
 }
 

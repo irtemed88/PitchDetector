@@ -318,8 +318,8 @@ void ConvertInt16ToFloat(RIOInterface* THIS, void *buf, float *outputBuf, size_t
 	bufferList->mNumberBuffers = 1;
 	bufferList->mBuffers[0].mNumberChannels = 1;
 	
-	bufferList->mBuffers[0].mDataByteSize = 256*bytesPerSample;
-	bufferList->mBuffers[0].mData = calloc(256, bytesPerSample);
+	bufferList->mBuffers[0].mDataByteSize = 512*bytesPerSample;
+	bufferList->mBuffers[0].mData = calloc(512, bytesPerSample);
 }
 
 
