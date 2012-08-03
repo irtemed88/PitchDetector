@@ -31,7 +31,7 @@
 	
 	/**RIO session setup */
 	RIOInterface *rioRef = [RIOInterface sharedInstance];
-	[rioRef setSampleRate:22050];
+	[rioRef setSampleRate:44100];
 	[rioRef setFrequency:294];
 	[rioRef initializeAudioSession];
 	
