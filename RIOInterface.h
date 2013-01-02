@@ -28,7 +28,7 @@
 
 #define kInputBus 1
 #define kOutputBus 0
-#define kBufferSize 512
+#define kBufferSize 1024
 #define kBufferCount 1
 #define N 10
 

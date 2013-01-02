@@ -318,8 +318,8 @@ void ConvertInt16ToFloat(RIOInterface* THIS, void *buf, float *outputBuf, size_t
 	bufferList->mNumberBuffers = 1;
 	bufferList->mBuffers[0].mNumberChannels = 1;
 	
-	bufferList->mBuffers[0].mDataByteSize = 512*bytesPerSample;
-	bufferList->mBuffers[0].mData = calloc(512, bytesPerSample);
+	bufferList->mBuffers[0].mDataByteSize = kBufferSize*bytesPerSample;
+	bufferList->mBuffers[0].mData = calloc(kBufferSize, bytesPerSample);
 }
 
 
@@ -355,12 +355,12 @@ void ConvertInt16ToFloat(RIOInterface* THIS, void *buf, float *outputBuf, size_t
 	
     NSLog (@"  Sample Rate:         %10.0f",  asbd.mSampleRate);
     NSLog (@"  Format ID:           %10s",    formatIDString);
-    NSLog (@"  Format Flags:        %10X",    asbd.mFormatFlags);
-    NSLog (@"  Bytes per Packet:    %10d",    asbd.mBytesPerPacket);
-    NSLog (@"  Frames per Packet:   %10d",    asbd.mFramesPerPacket);
-    NSLog (@"  Bytes per Frame:     %10d",    asbd.mBytesPerFrame);
-    NSLog (@"  Channels per Frame:  %10d",    asbd.mChannelsPerFrame);
-    NSLog (@"  Bits per Channel:    %10d",    asbd.mBitsPerChannel);
+    NSLog (@"  Format Flags:        %10lX",    asbd.mFormatFlags);
+    NSLog (@"  Bytes per Packet:    %10ld",    asbd.mBytesPerPacket);
+    NSLog (@"  Frames per Packet:   %10ld",    asbd.mFramesPerPacket);
+    NSLog (@"  Bytes per Frame:     %10ld",    asbd.mBytesPerFrame);
+    NSLog (@"  Channels per Frame:  %10ld",    asbd.mChannelsPerFrame);
+    NSLog (@"  Bits per Channel:    %10ld",    asbd.mBitsPerChannel);
 }
 
 
